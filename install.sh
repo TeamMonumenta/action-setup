@@ -11,15 +11,15 @@ if [ -z "${TEMP}" ]; then
   fi
 fi
 
-INSTALL_SCRIPT='https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh'
+INSTALL_SCRIPT='https://raw.githubusercontent.com/TeamMonumenta/reviewdog/master/install.sh'
 if [ "${VERSION}" == 'nightly' ] ; then
-  INSTALL_SCRIPT='https://raw.githubusercontent.com/reviewdog/nightly/master/install.sh'
+  INSTALL_SCRIPT='https://raw.githubusercontent.com/TeamMonumenta/nightly/master/install.sh'
   VERSION='latest'
 fi
 
 mkdir -p "${TEMP}/reviewdog/bin"
 
-echo '::group::🐶 Installing reviewdog ... https://github.com/reviewdog/reviewdog'
+echo '::group::🐶 Installing reviewdog ... https://github.com/TeamMonumenta/reviewdog'
 curl -sfL "${INSTALL_SCRIPT}" | sh -s -- -b "${TEMP}/reviewdog/bin" "${VERSION}" 2>&1
 echo '::endgroup::'
 
