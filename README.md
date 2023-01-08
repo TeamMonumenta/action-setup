@@ -31,7 +31,7 @@ steps:
 steps:
   - uses: TeamMonumenta/reviewdog-action-setup@v1
     with:
-      reviewdog_version: v0.13.1
+      reviewdog_version: v0.14.1
   - run: reviewdog -version
 ```
 
